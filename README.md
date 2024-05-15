@@ -26,6 +26,8 @@
 
 - Sharing Data and Emitting Events Between Components
 - Params Data
+- Http Client
+- Observables
 - Routing
 - Conditionals Directives
 - Pipes
