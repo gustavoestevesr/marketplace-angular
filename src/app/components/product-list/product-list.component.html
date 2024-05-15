@@ -1,1 +1,21 @@
-<p>product-list works!</p>
+<h2>Products</h2>
+
+@for(product of products; track product.id) {
+<h3>
+  <a
+    [title]="product.name + ' details'"
+    [routerLink]="['/products', product.id]"
+  >
+    {{ product.name }}
+  </a>
+</h3>
+
+@if(product.description) {
+<p>Description: {{ product.description }}</p>
+}
+
+<button type="button" (click)="share()">Share</button>
+
+<app-product-alerts [product]="product" (notify)="onNotify()">
+</app-product-alerts>
+}
